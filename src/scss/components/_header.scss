@@ -1,0 +1,119 @@
+.header {
+    &__nav {
+        @include media(mobile) {
+            background-color: #3a4660;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;            
+        }
+    }
+
+    &__hamburger {
+        display: none;
+
+        svg rect {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        &:hover {
+            cursor: pointer;
+
+            svg rect {
+                fill: rgb(206, 206, 206);
+            }
+        }
+        
+        @include media(mobile) {
+            display: block;            
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: #fff;
+        list-style-type: none;
+        background-color: #3a4660;
+        margin: 0;
+        box-shadow: 2px 2px 18px #0000008a;
+        padding: 40px;
+        font-size: 18px;
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+            top: 0;
+        }
+
+        @include media(mobile) {
+            position: absolute;
+            flex-direction: column;
+            top: -100%;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            font-size: 26px;
+            box-shadow: none;
+            z-index: 100;
+        }
+    }
+
+    &__close {
+        display: none;
+        
+        path {
+            transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            path {
+                fill: rgb(206, 206, 206);
+            }
+        }
+
+
+        @include media(mobile) {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: #fff;
+            bottom: -7px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            transition: width 0.2s ease-in;
+        }
+
+        &:hover::before {
+            cursor: pointer;
+            width: 100%;    
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+}

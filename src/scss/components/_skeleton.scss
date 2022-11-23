@@ -1,0 +1,33 @@
+.skeleton {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(212, 212, 212, 0.593);
+	box-shadow: 2px 2px 6px #0000002e;;
+	padding: 40px;
+	width: 100%;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        row-gap: 50px;
+    }
+    
+    & span + span {
+        margin-top: 40px;
+    }
+    
+    &__title {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__info {
+        font-size: 24px;
+        text-align: center;
+    }
+}

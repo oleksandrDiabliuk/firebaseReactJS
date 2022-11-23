@@ -1,0 +1,28 @@
+.profile {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0px 1px 20px 0px #0000008a;
+	padding: 60px;
+	border-radius: 0 0 20px 20px;
+	margin: 0 auto;
+	background-color: #3a4660;
+
+    &__title {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    &__email {
+        font-size: 24px;
+
+        &_bold {
+            font-weight: bold;
+	        margin-right: 10px;
+        }
+    }
+
+}
