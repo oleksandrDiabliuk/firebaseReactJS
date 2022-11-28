@@ -180,68 +180,9 @@ const Info = () => {
 							<div className="skeleton"><CardSkeleton /></div>
 						</>
 					}
-					{/* {console.log(employeesIterator)} */}
-
-					{/* {employeesIterator ? employeesIterator.sortMap():} */}
 
 					<Iterator items={employees} setNewAge={setNewAge} updateUserAge={updateUserAge} deleteUser={deleteUser}/>
 
-					{/* {employees.sort((a, b) => a.age - b.age).map((user, i) => {
-						return (
-							<div className="employees__item" key={i}>
-								<div className="employees__row">
-									<h2 className="employees__title">Employee</h2>	
-								</div>
-								<div className="employees__row">
-									<p className="employees__info"><span className="employees__info_bold">Name:</span> {user.name}</p>	
-								</div>
-								<div className="employees__row">
-									<p className="employees__info"><span className="employees__info_bold">Surname:</span> {user.surname}</p>
-								</div>
-								<div className="employees__row">
-									<p className="employees__info"><span className="employees__info_bold">Country:</span> {user.country}</p>
-								</div>
-								<div className="employees__row">
-									<p className="employees__info"><span className="employees__info_bold">Age:</span> {user.age}</p>
-								</div>
-								<div className="employees__row">
-									<p className="employees__info"><span className="employees__info_bold">Salary:</span> {user.salary}</p>	
-								</div>
-								<div className="employees__row">
-									<input 
-										type="number"
-										className="employees__input"
-										placeholder="Type new age" 
-										onChange={(event) => {
-											setNewAge(event.target.value);
-										}}
-									/>
-								</div>
-								<div className="employees__row">
-									<button
-										className="button button_update-age"
-										data-back="Click!)" 
-										data-front="Update age"
-										onClick={() => {
-											updateUserAge(user.id);
-										}}
-									>
-									</button>
-								</div>
-								<div className="employees__row">
-									<button
-										className="button"
-										data-back="Click!)" 
-										data-front="Delete employee"
-										onClick={() => {
-											deleteUser(user.id);
-										}}
-									>
-									</button>
-								</div>
-							</div>
-						);
-					})} */}
 				</div>
 			</div>
 		</main>
