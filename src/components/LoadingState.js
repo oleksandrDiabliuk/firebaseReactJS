@@ -1,5 +1,3 @@
-import React from "react";
-
 export default class LoadingState {
     constructor() {
         this.state = new Loading();
