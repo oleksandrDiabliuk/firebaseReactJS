@@ -91,6 +91,8 @@ const Registration = () => {
 
 					<button className="button" data-back="Click!)" data-front="Register" onClick={register}></button>
 
+					{(error) ? <span className="error">{error}</span> : ''}
+
 					<Routes>
 						<Route path="/info" component={<Info />}></Route>
 					</Routes>
