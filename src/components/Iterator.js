@@ -88,12 +88,6 @@ export default class Iterator extends React.Component {
         this.index = 0;
     }
 
-    each(callback) {
-        for (var item = this.first(); this.hasNext(); item = this.next()) {
-            callback(item);
-        }
-    }
-
 	sortMap(callback) {
         const resultArray = [];
 
